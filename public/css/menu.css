@@ -1,0 +1,201 @@
+
+/* MENU BOOK PAGE */
+
+body {
+    background: #f4f6f8;
+}
+
+.menu-container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+/* HEADER */
+
+.menu-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.menu-page-header h1 {
+    color: #5c4033;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.menu-page-header p {
+    color: #857467;
+}
+
+/* FILTER */
+
+.menu-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: white;
+    color: #5c4033;
+    border: 1px solid #e5d4c5;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #5c4033;
+    color: white;
+}
+
+/* GRID */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+
+.menu-card {
+    background: white;
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-image,
+.menu-image-placeholder {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.menu-image-placeholder {
+    background: #eee5dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #857467;
+}
+
+.menu-card-content {
+    padding: 12px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.menu-badges {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.category-badge {
+    color: #8d6e59;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.halal-badge {
+    color: #237c56;
+    font-size: 13px;
+}
+
+.menu-card h3 {
+    color: #332820;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.menu-description {
+    color: #756a63;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.menu-allergen {
+    color: #857467;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.menu-price {
+    color: #5c4033;
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+/* ADMIN ACTIONS */
+
+.menu-actions {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #eee5dc;
+    padding-top: 15px;
+}
+
+.menu-actions .btn-edit,
+.menu-actions form {
+    flex: 1;
+}
+
+.menu-actions .btn-edit,
+.menu-actions .btn-delete {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 11px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.empty-menu {
+    grid-column: 1 / -1;
+    color: #857467;
+    text-align: center;
+    padding: 40px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 800px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

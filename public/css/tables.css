@@ -1,0 +1,267 @@
+
+body {
+    background: #f4f6f8;
+}
+
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.table-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e5e7eb;
+}
+
+.table-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.table-card-header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #4e342e;
+}
+
+.table-status {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.table-status.available {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.table-status.occupied {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.table-card-body p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 1100px) {
+    .table-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 800px) {
+    .table-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .table-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Layout khusus halaman Table & Area */
+
+body {
+    background-color: #f4f6f8;
+}
+
+
+/* TABLE & AREA - MATCH MENU BOOK */
+
+.container {
+    width: 90%;
+    max-width: none;
+    margin: 40px auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    color: #5c4033;
+    font-size: 32px;
+    margin: 0 0 8px;
+}
+
+.page-header p {
+    color: #857467;
+    margin: 0;
+}
+
+
+/* ADD TABLE FORM */
+
+.table-form-card {
+    background: #ffffff;
+    max-width: 650px;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.table-form-group {
+    margin-bottom: 22px;
+}
+
+.table-form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4e342e;
+    margin-bottom: 8px;
+}
+
+.table-form-group input,
+.table-form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 14px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.table-form-group input:focus,
+.table-form-group select:focus {
+    outline: none;
+    border-color: #795548;
+}
+
+.table-error {
+    display: block;
+    color: #dc2626;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.table-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.table-btn-cancel,
+.table-btn-save {
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.table-btn-cancel {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.table-btn-save {
+    background: #604235;
+    color: #ffffff;
+    border: none;
+}
+
+
+/* ADD TABLE BUTTON */
+
+.table-btn-add {
+    display: inline-block;
+    background-color: #604235;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.table-btn-add:hover {
+    background-color: #795548;
+}
+
+@media (max-width: 600px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+
+
+/* ADMIN ACTIONS - SAME AS MENU BOOK */
+
+.table-actions {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #eee5dc;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.table-actions .btn-edit,
+.table-actions form {
+    flex: 1;
+    min-width: 0;
+}
+
+.table-actions form {
+    margin: 0;
+}
+
+.table-actions .btn-edit,
+.table-actions .btn-delete {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 11px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.table-actions .btn-edit {
+    background-color: #f59e0b;
+    color: white;
+    text-decoration: none;
+}
+
+.table-actions .btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.table-actions .btn-delete:hover {
+    background-color: #b02a37;
+}
